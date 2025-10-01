@@ -12,7 +12,36 @@
   </head>
 
   <body>
-    <h1 class="text-danger">Bootstrap</h1>
+    <header>
+      <nav>
+        <div class="container">
+          <span>
+            <%= link_to 'Bookers', root_path %>
+          </span>
+          <!--<button>-->
+          <!--</button>-->
+          <div>
+            <ul>
+              <li>
+                <%= link_to 'Home', root_path %>
+              </li>
+              <li>
+                <%= link_to 'About', homes_about_path %>
+              </li>
+              <li>
+                <%= link_to 'Sign up', new_user_registration_path %>
+              </li>
+              <li>
+                <%= link_to 'Log in', new_user_session_path %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+
     <%= yield %>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
