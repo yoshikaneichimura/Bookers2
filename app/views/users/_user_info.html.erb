@@ -1,15 +1,24 @@
-<div class="col">
-  <h2>User info</h2>
-  <table>
-  </table>
-    <div class="row">
-    </div>
-    <h2>New book</h2>
-    <%= form_with model: book, url: books_path, method: :post do |f| %>
-      <label>Title</label><br>
-      <%= f.text_field :title %><br>
-      <label>Opinion</label><br>
-    <%= f.text_area :body %><br>
-    <%= f.submit 'Create Book' %>
-  <% end %>
-</div>
+<h2>User info</h2>
+<table class="table">
+  <tbody>
+    <tr></tr>
+    <tr>
+      <th>name</th>
+      <th><%= user.name %></th>
+    </tr>
+    <tr>
+      <th>introduction</th>
+      <th><%= user.introduction %></th>
+    </tr>
+  </tbody>
+</table>
+  <div class="row">
+  </div>
+  <h2>New book</h2>
+  <%= form_with model: book, url: books_path, method: :post do |f| %>
+    <label>Title</label><br>
+    <%= f.text_field :title %><br>
+    <label>Opinion</label><br>
+  <%= f.text_area :body %><br>
+  <%= f.submit 'Create Book' %>
+<% end %>
