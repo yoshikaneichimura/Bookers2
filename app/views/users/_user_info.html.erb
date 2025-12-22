@@ -18,7 +18,7 @@
   <%= link_to "user_edit", edit_user_path(user.id) ,class: "btn btn-outline-secondary btn-block" %>
 </div>
 <h2>New book</h2>
-  <%= form_with model: book, url: books_path, method: :post do |f| %>
+  <%= form_with model: book_new, url: books_path, method: :post do |f| %>
   <label>Title</label><br>
   <%= f.text_field :title %><br>
   <label>Opinion</label><br>
