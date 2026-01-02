@@ -15,7 +15,9 @@
   </tbody>
 </table>
 <div class="row">
-  <%= link_to "user_edit", edit_user_path(user.id) ,class: "btn btn-outline-secondary btn-block" %>
+  <% if user == current_user %>
+    <%= link_to "user_edit", edit_user_path(user.id) ,class: "btn btn-outline-secondary btn-block" %>
+  <% end %>
 </div>
 <h2>New book</h2>
   <%= form_with model: book_new, url: books_path, method: :post do |f| %>
