@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-
+  before_action :authenticate_user!
   def index
     @book_new = Book.new
     @books = Book.all
